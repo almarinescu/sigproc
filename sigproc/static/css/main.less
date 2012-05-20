@@ -1,0 +1,91 @@
+@graph_width: 400px;
+@graph_height: 400px;
+
+@font-face {
+  font-family: BreeSerif;
+  src: url('/static/fonts/BreeSerif-Regular.otf');
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  /* background: url('/static/img/bg.jpg'); */
+}
+
+h3 {
+  font-family: BreeSerif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.body-container {
+  text-align: left;
+  width: 800px;
+  margin: 0px auto;
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  .graph-container {
+    float: left;
+
+    .graph-header {
+      margin-left: 25px;
+    }
+
+    .response-graph {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .main-container {
+    width: 2 * @graph_width;
+    height: 3/4 * @graph_height;
+    margin-bottom: 60px;
+    clear: both;
+
+    h3 {
+      font-size: 30px;
+      margin-top: 25px;
+    }
+  }
+
+  .secondary-container {
+    width: @graph_width;
+    height: @graph_height;
+    margin-bottom: 20px;
+  }
+
+  .header-control-container {
+    overflow: hidden;
+    clear: both;
+
+    .header-container {
+      width: 400px;
+      height: 70px;
+      float: left;
+    }
+
+    .slider-container {
+      float: right;
+      width: 400px;
+      margin-top: 10px;
+
+      #graph-overview {
+        width: @graph_width;
+        height: 40px;
+      }
+    }
+  }
+
+  #numeric-freq-control-panel {
+    clear: both;
+    width: 500px;
+    display: block;
+    margin: 0px auto;
+  }
+}
+
+
