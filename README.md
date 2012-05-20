@@ -51,7 +51,7 @@ memcache server running, sigproc will complain and refuse to start.
 memcached -m 64 -p 1122 -u nobody -l 127.0.0.1
 ```
 
-Launch the sigproc web-app:
+Launch the sigproc web-app using the command
 
 ```launch-sigproc```
 
