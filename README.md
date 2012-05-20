@@ -53,7 +53,7 @@ memcached -m 64 -p 1122 -u nobody -l 127.0.0.1
 
 Launch the sigproc web-app:
 
-```launch-sigproc``
+```launch-sigproc```
 
 The sigproc web-app should be up and running at 127.0.0.1:8080.
 
