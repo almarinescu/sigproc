@@ -43,7 +43,7 @@ def mako_template(lookup, templateName):
   This method checks the mako template in all directories specified by 
   the Mako TemplateLookup `lookup`.
   '''
-	return lookup.get_template(templateName)
+  return lookup.get_template(templateName)
 
 def cache_response(cache_client, key_cache):
   '''
@@ -76,8 +76,8 @@ def cache_response(cache_client, key_cache):
 
 def ck_response():
   '''
-  Use the `low` and `high` parameters to create the key-cache used to
-  retrieve values for `/response` page.
+  This cache key function uses the `low` and `high` parameters to create the 
+  key-cache used to retrieve values for `/response` page.
   '''
   low = bottle.request.query['low']
   high = bottle.request.query['high']
@@ -85,7 +85,8 @@ def ck_response():
   return '/response-{0:.2f}-{1:.2f}'.format(float(low), float(high))
 
 def ck_index():
-  '''HTML template pages are always cached using the path they are
+  '''
+  HTML template pages are always cached using the path they are
   rendering with `/template` appended at the end.
   '''
   return '/index/template'

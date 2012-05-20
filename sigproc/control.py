@@ -62,12 +62,12 @@ def response():
 @main_app.route('/favicon.ico')
 def favicon():
   '''Serve the favicon icon.'''
-	return bottle.static_file('favicon.ico', os.path.join('sigproc', 'static'))
+  return bottle.static_file('favicon.ico', os.path.join('sigproc', 'static'))
 
 @main_app.route('/static/<filename:path>')
 def static_files(filename):
   '''Serve static files from the /static directory.'''
-	return bottle.static_file(filename, os.path.join('sigproc', 'static'))
+  return bottle.static_file(filename, os.path.join('sigproc', 'static'))
 
 @main_app.route('/')
 @utils.cache_response(utils.memcache_client, utils.ck_index)

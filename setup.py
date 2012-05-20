@@ -6,6 +6,8 @@ import sigproc
 
 setuptools.setup(
   author='Alexandru Marinescu <almarinescu@gmail.com>',
+  entry_points={'console_scripts': 
+      ['launch-sigproc = sigproc.control:run_app']},
   install_requires=[
       'bottle', 
       'gunicorn',
